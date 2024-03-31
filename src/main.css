@@ -1,9 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 
-    svg {
-		color: white;   
-        cursor: pointer;
+	svg {
+		color: white;
+		cursor: pointer;
 	}
+}
+
+body {
+	background-color: #e3e6e6;
 }

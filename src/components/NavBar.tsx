@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './css/navBar.css';
+import { Button, Input } from '.';
 
 const NavBar = () => {
 	return (
@@ -19,12 +20,22 @@ const NavBar = () => {
 						</svg>
 						<span>App Store</span>
 					</Link>
+					<Input />
+					<Button
+						text="Search Product"
+						color="blue"
+						onClick={function (): void {
+							throw new Error('Function not implemented.');
+						}}
+					/>
 				</li>
+
 				<li>
+					<b className="quantity">10</b>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="25"
-						height="25"
+						width="30"
+						height="30"
 						viewBox="0 0 32 32">
 						<path
 							fill="currentColor"

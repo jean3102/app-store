@@ -1,18 +1,18 @@
 import './css/button.css';
 
 type ButtonsProps = {
-	text: string;
+	children: React.ReactNode;
 	color?: string;
 	onClick: () => void;
 };
 
-const Button = ({ text, onClick, color }: ButtonsProps) => {
+const Button = ({ onClick, color, children }: ButtonsProps) => {
 	return (
 		<button
 			className="button"
 			onClick={onClick}
 			style={{ backgroundColor: color }}>
-			{text}
+			{children}
 		</button>
 	);
 };

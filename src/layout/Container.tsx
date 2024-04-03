@@ -10,7 +10,7 @@ const Container = ({ children }: ContainerProps) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<main className='container'>{children}</main>
 			<Footer />
 		</>
 	);

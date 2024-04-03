@@ -1,10 +1,14 @@
 .navBar {
 	background-color: rgb(5, 69, 71);
+	height: 7vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	ul {
 		display: flex;
 		justify-content: space-between;
-        align-items: center;
+		align-items: center;
 		padding: 1em;
 		list-style: none;
 		a {
@@ -17,16 +21,16 @@
 		}
 
 		li {
-            display: flex;
-            gap: 1em;
+			display: flex;
+			gap: 1em;
 			.quantity {
-                position: absolute;
+				position: absolute;
 				color: white;
 				background-color: rgb(248, 122, 4);
-                border-radius: 1em;
-                font-size: 0.7em;
-                padding: 0.2em;
-                margin: 0em 1em;
+				border-radius: 1em;
+				font-size: 0.7em;
+				padding: 0.2em;
+				margin: 0em 1em;
 			}
 		}
 	}

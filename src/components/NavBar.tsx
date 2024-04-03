@@ -22,12 +22,12 @@ const NavBar = () => {
 					</Link>
 					<Input />
 					<Button
-						text="Search Product"
 						color="blue"
 						onClick={function (): void {
 							throw new Error('Function not implemented.');
-						}}
-					/>
+						}}>
+						Search Product
+					</Button>
 				</li>
 
 				<li>

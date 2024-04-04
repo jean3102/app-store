@@ -1,37 +1,3 @@
-/* .card {
-	width: 250px;
-	height: 380px;
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-	text-align: center;
-	border-radius: 1em;
-	transition: 0.3s;
-
-	img {
-		width: 100%;
-		border-top-left-radius: 1em;
-		border-top-right-radius: 1em;
-	}
-	p {
-		padding: 1em;
-	}
-	.card-body {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		button {
-			display: flex;
-			justify-content: center;
-			gap: 0.5em;
-			width: 120px;
-		}
-	}
-}
-
-.card:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-} */
-
 .d-flex {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -54,19 +20,15 @@
 	align-items: center;
 }
 
-
-.page-wrapper {
-	/* height: 100%;
-	display: table; */
-}
-
 .page-wrapper .page-inner {
 	display: table-cell;
 	vertical-align: middle;
 }
 
 .el-wrapper {
+	font-size: 15px;
 	width: 360px;
+	/* height: 400px; */
 	padding: 15px;
 	margin: 15px auto;
 	background-color: #fff;
@@ -95,7 +57,7 @@
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	color: #818181;
+	color: white;
 }
 
 .el-wrapper:hover .add-to-cart {
@@ -103,24 +65,26 @@
 }
 
 .el-wrapper:hover .img {
-	webkit-filter: blur(7px);
 	-o-filter: blur(7px);
 	-ms-filter: blur(7px);
 	filter: blur(7px);
-	filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
-	opacity: 0.4;
+	opacity: 0.3;
 }
 
 .el-wrapper:hover .info-inner {
-	bottom: 155px;
+	bottom: 235px;
 }
 
 .el-wrapper:hover .product-description {
 	-webkit-transition-delay: 300ms;
 	-o-transition-delay: 300ms;
 	transition-delay: 300ms;
-	bottom: 50px;
+	/* bottom: 35px; */
+	top: 30%;
 	opacity: 1;
+	color: rgba(0, 0, 0, 0.678);
+	text-align: center;
+	text-wrap: wrap;
 }
 
 .el-wrapper .box-down {
@@ -190,7 +154,7 @@
 	/* ease-out */
 	position: absolute;
 	width: 100%;
-	bottom: 25px;
+	bottom: 15px;
 }
 
 .info-inner .p-name,
@@ -224,7 +188,7 @@
 	/* ease-out */
 	position: absolute;
 	width: 100%;
-	bottom: -20px;
+	bottom: -10px;
 	font-family: 'PT Sans', sans-serif;
 	color: #828282;
 	opacity: 0;
@@ -241,7 +205,6 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 }
 

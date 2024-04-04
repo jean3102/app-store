@@ -1,6 +1,5 @@
 .navBar {
 	background-color: rgb(5, 69, 71);
-	height: 7vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

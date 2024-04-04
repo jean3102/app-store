@@ -1,7 +1,7 @@
-import { ProductType } from '../../types/product';
+import { Product } from '../../types/product';
 import '../css/cardProduct.css';
 type cardProductProps = {
-	products: ProductType;
+	products: Product;
 };
 
 const CardProduct = ({ products }: cardProductProps) => {
@@ -15,7 +15,7 @@ const CardProduct = ({ products }: cardProductProps) => {
 							<img
 								className="img"
 								src={images[0]}
-								alt=""
+								alt={title}
 							/>
 							<div className="img-info">
 								<div className="info-inner">

@@ -1,17 +1,22 @@
 import { CardProduct } from '..';
 import useProducts from '../../hooks/useProducts';
+import SearchProduct from './SearchProduct';
+import './css/products.css';
 
 const Products = () => {
-	const { products} = useProducts();
+	const { products } = useProducts();
 
 	return (
 		<>
-			{products?.map((product) => (
-				<CardProduct
-					products={product}
-					key={product.id}
-				/>
-			))}
+			<SearchProduct />
+			<section className="products">
+				{products?.map((product) => (
+					<CardProduct
+						products={product}
+						key={product.id}
+					/>
+				))}
+			</section>
 		</>
 	);
 };

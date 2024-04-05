@@ -21,7 +21,8 @@
 
 		li {
 			display: flex;
-			gap: 1em;
+			/* gap: 1em; */
+			align-items: center;
 			.quantity {
 				position: absolute;
 				color: white;

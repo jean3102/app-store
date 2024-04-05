@@ -1,14 +1,14 @@
+import { useParams } from 'react-router-dom';
 import { CardProduct } from '..';
 import useProducts from '../../hooks/useProducts';
-import SearchProduct from './SearchProduct';
 import './css/products.css';
 
 const Products = () => {
-	const { products } = useProducts();
+	const { category } = useParams();
+	const { products } = useProducts({ param: category });
 
 	return (
 		<>
-			<SearchProduct />
 			<section className="products">
 				{products?.map((product) => (
 					<CardProduct

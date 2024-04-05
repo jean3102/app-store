@@ -11,6 +11,11 @@ function App() {
 				/>
 
 				<Route
+					path="category/:category"
+					element={<Home />}
+				/>
+
+				<Route
 					path="/shopping_cart"
 					element={<ShoppingCart />}
 				/>

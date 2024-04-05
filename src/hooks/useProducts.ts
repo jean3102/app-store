@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getProducts } from '../services/products';
-import { Product } from '../types/product';
+import { CategoryParam, Product } from '../types/product';
 
-const useProducts = () => {
+const useProducts = ({ param }: CategoryParam) => {
 	const [products, setProducts] = useState<Product[]>();
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
@@ -10,7 +10,7 @@ const useProducts = () => {
 	useEffect(() => {
 		const fetchProducts = async () => {
 			try {
-				const response = await getProducts();
+				const response = await getProducts({ param });
 				setProducts(response);
 			} catch (error) {
 				if (error instanceof Error) {
@@ -24,7 +24,7 @@ const useProducts = () => {
 			}
 		};
 		fetchProducts();
-	}, []);
+	}, [param]);
 
 	return { products, loading, error };
 };

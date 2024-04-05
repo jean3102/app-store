@@ -39,11 +39,8 @@ const CardProduct = ({ products }: cardProductProps) => {
 								href="#">
 								<span className="price">${price} </span>
 								<div className="start">
-									{[...Array(Math.round(rating.rate)).keys()].map((item,index) => {
-										//  console.log(`🚀 ------------ item:`, item)
-										//  console.log(`🚀 ------------ index:`, index)
-										//  console.log('-------------------------------')
-										return (
+									{[...Array(Math.round(rating.rate)).keys()].map(
+										(_, index) => (
 											<svg
 												key={index}
 												xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +52,9 @@ const CardProduct = ({ products }: cardProductProps) => {
 													d="m7.69 19.346l1.614-5.33L5.115 11h5.216L12 5.462L13.67 11h5.215l-4.189 3.015l1.614 5.331L12 16.07l-4.31 3.277Z"
 												/>
 											</svg>
-										);
-									})}
+										)
+									)}
+									)
 								</div>
 								<span className="add-to-cart">
 									<span className="txt">Add in cart</span>

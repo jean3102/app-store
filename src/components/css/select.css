@@ -1,0 +1,42 @@
+.selectList {
+	/* width:400px; */
+	/* height: 35px; */
+	border: none;
+	appearance: none;
+	width: 250px;
+	font-size: 0.9rem;
+	padding: 0.675em 1em 0.675em 1em;
+	background-color: #fff;
+	border: 1px solid #caced1;
+	border-radius: 0.25rem;
+	color: #000;
+	cursor: pointer;
+}
+
+.selectList::before,
+.selectList::after {
+	--size: 0.3rem;
+	content: '';
+	position: absolute;
+	right: 1rem;
+	pointer-events: none;
+}
+
+.selectList::before {
+	border-left: var(--size) solid transparent;
+	border-right: var(--size) solid transparent;
+	border-bottom: var(--size) solid black;
+	top: 40%;
+}
+
+.selectList::after {
+	border-left: var(--size) solid transparent;
+	border-right: var(--size) solid transparent;
+	border-top: var(--size) solid black;
+	top: 55%;
+}
+
+.selectList:focus-visible{
+    border: 1px solid rgba(0, 0, 0, 0.651);
+    outline: none;
+}

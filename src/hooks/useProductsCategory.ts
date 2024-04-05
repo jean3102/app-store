@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getProductCategory } from '../services/products';
-import { ProductCategory } from '../types/product';
 
 const useProductsCategory = () => {
-	const [categories, setCategories] = useState<ProductCategory[]>();
+	const [categories, setCategories] = useState<[]>();
 
 	useEffect(() => {
 		const fetchProductCategories = async () => {

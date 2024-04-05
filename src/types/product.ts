@@ -11,6 +11,6 @@ export type Product = {
 	};
 };
 
-export type ProductCategory = {
-	categories: string[];
+export type CategoryParam = {
+	param: string | undefined;
 };

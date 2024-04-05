@@ -5,7 +5,6 @@ import './css/searchProduct.css';
 
 const SearchProduct = () => {
 	const { categories } = useProductsCategory();
-	console.log(`🚀 ------------ categories:`, categories);
 
 	return (
 		<section className="searchProduct">

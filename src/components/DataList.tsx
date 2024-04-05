@@ -20,11 +20,13 @@ const DataList = ({ id, list, placeholder, data }: InputProps) => {
 				/>
 
 				<datalist id={list}>
-					{data?.map(({ id, name }) => (
-						<option
-							key={id}
-							value={name}></option>
-					))}
+					{data?.map((category, index) => {
+						return (
+							<option
+								key={index}
+								value={category}></option>
+						);
+					})}
 				</datalist>
 			</div>
 		</>

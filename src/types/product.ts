@@ -2,16 +2,15 @@ export type Product = {
 	id: number;
 	title: string;
 	price: number;
+	category: string;
 	description: string;
-	images: string[];
-	category: {
-		id: number;
-		name: string;
-		image: string;
+	image: string;
+	rating: {
+		rate: number;
+		count: number;
 	};
 };
 
 export type ProductCategory = {
-	id: number;
-	name: string;
+	categories: string[];
 };

@@ -5,11 +5,11 @@ import Loading from '../components/Loading';
 const Home = () => {
 	const LazyProducts = lazy(() => import('../components/products/Products'));
 	return (
-		<Container>
-			<Suspense fallback={<Loading />}>
-				<LazyProducts />
-			</Suspense>
-		</Container>
+			<Container>
+				<Suspense fallback={<Loading />}>
+					<LazyProducts />
+				</Suspense>
+			</Container>
 	);
 };
 

@@ -1,3 +1,4 @@
+import { useCart } from '../../hooks/useCart';
 import { Product } from '../../types/product';
 import '../css/cardProduct.css';
 type cardProductProps = {
@@ -5,7 +6,8 @@ type cardProductProps = {
 };
 
 const CardProduct = ({ products }: cardProductProps) => {
-	const { image, title, price, description, category, rating } = products;
+	const { id, image, title, price, description, category, rating } = products;
+	const { addToCart } = useCart();
 
 	return (
 		<div className="page-wrapper">
@@ -35,6 +37,14 @@ const CardProduct = ({ products }: cardProductProps) => {
 							</div>
 
 							<a
+								onClick={() =>
+									addToCart({
+										id: id,
+										name: 'new',
+										price: 25,
+										quantity: 99,
+									})
+								}
 								className="cart"
 								href="#">
 								<span className="price">${price} </span>

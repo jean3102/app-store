@@ -9,6 +9,8 @@ const Products = () => {
 
 	return (
 		<>
+
+
 			<section className="products">
 				{products?.map((product) => (
 					<CardProduct

@@ -54,7 +54,6 @@ const CardProduct = ({ products }: cardProductProps) => {
 											</svg>
 										)
 									)}
-									)
 								</div>
 								<span className="add-to-cart">
 									<span className="txt">Add in cart</span>

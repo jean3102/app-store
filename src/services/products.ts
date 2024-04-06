@@ -4,8 +4,10 @@ export const getProducts = async ({
 	param,
 }: CategoryParam): Promise<[Product]> => {
 	let URL = 'https://fakestoreapi.com/products';
-	if (param && param !== 'all')
+	
+	if (param && param !== 'all') {
 		URL = `https://fakestoreapi.com/products/category/${param}`;
+	}
 
 	const data = await fetch(URL);
 	return data.json();

@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
 import './css/cart.css';
-import { useCart, useCartCounter } from '../hooks';
+import { useCart } from '../hooks';
 
 const Cart = () => {
-	const { productsList } = useCart();
-	const { quantity } = useCartCounter();
+	const { quantity } = useCart();
 	return (
 		<section className="cartCounter">
 			<Link to={'/shopping_cart'}>
 				{quantity > 9 ? (
 					<b className="quantity">9+</b>
 				) : (
-					<b className="quantity">{productsList.length}</b>
+					<b className="quantity">{quantity}</b>
 				)}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

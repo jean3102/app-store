@@ -3,6 +3,7 @@ import { Cart } from '../types/cart';
 
 type CartContextType = {
 	productsList: Cart[];
+	quantity: number;
 	addToCart: (product: Cart) => void;
 };
 

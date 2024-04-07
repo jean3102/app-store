@@ -8,8 +8,11 @@ type CartProviderType = {
 
 export const CartProvider = ({ children }: CartProviderType) => {
 	const [cart, setCart] = useState<Cart[]>([]);
+	const [quantity, setQuantity] = useState(0);
 
 	const addToCart = (product: Cart) => {
+		setQuantity((prevValue) => prevValue + 1);
+		
 		if (cart.some((item) => item.id === product.id)) {
 			const newProduct = cart.map((item) =>
 				item.id === product.id
@@ -29,6 +32,7 @@ export const CartProvider = ({ children }: CartProviderType) => {
 			value={{
 				productsList: cart,
 				addToCart: addToCart,
+				quantity: quantity,
 			}}>
 			{children}
 		</CartContext.Provider>

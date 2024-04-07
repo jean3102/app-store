@@ -1,11 +1,17 @@
+import { Suspense, lazy } from 'react';
 import { useCart } from '../../hooks/useCart';
 import { Product } from '../../types/product';
 import '../css/cardProduct.css';
+import Loading from '../Loading';
+import ProductRating from './ProductRating';
 type cardProductProps = {
 	products: Product;
 };
 
 const CardProduct = ({ products }: cardProductProps) => {
+
+	const LazyLoadedImage = lazy(() => import('./LazyLoadedImage'));
+
 	const { id, image, title, price, description, category, rating } = products;
 	const { addToCart } = useCart();
 
@@ -15,11 +21,12 @@ const CardProduct = ({ products }: cardProductProps) => {
 				<div className="row">
 					<div className="el-wrapper">
 						<div className="box-up">
-							<img
-								className="img"
-								src={image}
-								alt={title}
-							/>
+							<Suspense fallback={<Loading />}>
+								<LazyLoadedImage
+									src={image}
+									alt={title}
+								/>
+							</Suspense>
 							<div className="img-info">
 								<div className="info-inner">
 									<span className="p-name">{title}</span>
@@ -49,7 +56,8 @@ const CardProduct = ({ products }: cardProductProps) => {
 								href="#">
 								<span className="price">${price} </span>
 								<div className="start">
-									{[...Array(Math.round(rating.rate)).keys()].map(
+									<ProductRating rating={rating.rate} />
+									{/* {[...Array(Math.round(rating.rate)).keys()].map(
 										(_, index) => (
 											<svg
 												key={index}
@@ -63,7 +71,7 @@ const CardProduct = ({ products }: cardProductProps) => {
 												/>
 											</svg>
 										)
-									)}
+									)} */}
 								</div>
 								<span className="add-to-cart">
 									<span className="txt">Add in cart</span>

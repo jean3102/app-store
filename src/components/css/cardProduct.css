@@ -24,12 +24,6 @@
 	left: 0px;
 }
 
-.start {
-	svg {
-		color: orange;
-	}
-}
-
 .el-wrapper:hover .price {
 	left: 20px;
 	-webkit-transform: translateY(-50%);

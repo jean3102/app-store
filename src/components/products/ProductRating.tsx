@@ -7,7 +7,6 @@ const ProductRating = ({ rating }: ProductRatingProps) => {
 
 	const stars = [];
 	for (let i = 0; i < 5; i++) {
-		console.log(`🚀 ------------ i :`, i )
 		if (i < fullStars) {
 			stars.push(<span key={i} style={{'color':'orange'}}>&#9733;</span>);
 		} else {

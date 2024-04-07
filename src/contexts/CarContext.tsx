@@ -6,6 +6,4 @@ type CartContextType = {
 	addToCart: (product: Cart) => void;
 };
 
-export const CartContext = createContext<CartContextType | undefined>(
-	undefined
-);
+export const CartContext = createContext<CartContextType | undefined>(undefined);

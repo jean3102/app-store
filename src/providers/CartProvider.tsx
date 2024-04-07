@@ -10,7 +10,17 @@ export const CartProvider = ({ children }: CartProviderType) => {
 	const [cart, setCart] = useState<Cart[]>([]);
 
 	const addToCart = (product: Cart) => {
-		console.log(`🚀 ------------ product:`, product)
+		if (cart.some((item) => item.id === product.id)) {
+			const newProduct = cart.map((item) =>
+				item.id === product.id
+					? { ...item, quantity: item.quantity + product.quantity }
+					: item
+			);
+
+			setCart(newProduct);
+			return;
+		}
+
 		setCart([...cart, product]);
 	};
 

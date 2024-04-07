@@ -40,9 +40,9 @@ const CardProduct = ({ products }: cardProductProps) => {
 								onClick={() =>
 									addToCart({
 										id: id,
-										name: 'new',
-										price: 25,
-										quantity: 99,
+										name: title,
+										price: price,
+										quantity: 1,
 									})
 								}
 								className="cart"

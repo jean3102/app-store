@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import './css/cart.css';
-import { useCart } from '../hooks';
+import './css/cartBubble.css';
+import { useCart } from '../../hooks';
 
-const Cart = () => {
+const CartBubble = () => {
 	const { quantity } = useCart();
 	return (
 		<section className="cartCounter">
@@ -27,4 +27,4 @@ const Cart = () => {
 	);
 };
 
-export default Cart;
+export default CartBubble;

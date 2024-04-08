@@ -1,5 +1,5 @@
 import useProductsCategory from '../../hooks/useProductsCategory';
-import SelectList from '../SelectList';
+import SelectList from '../nav/SelectList';
 import './css/searchProduct.css';
 import { useNavigate } from 'react-router-dom';
 

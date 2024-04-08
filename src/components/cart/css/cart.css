@@ -1,0 +1,33 @@
+.headSide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+
+	svg {
+		color: black;
+	}
+}
+
+.bodySide {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.leftSide {
+	background-color: aqua;
+	flex: 2;
+}
+
+.rightSide {
+	background-color: royalblue;
+	flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+	.bodySide {
+		flex-direction: column;
+		flex-direction: column-reverse;
+	}
+}

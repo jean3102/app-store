@@ -1,9 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, ShoppingCart } from './pages';
+import { CartProvider } from './providers/CartProvider';
 
 function App() {
 	return (
-		<>
+		<CartProvider>
 			<Routes>
 				<Route
 					path="/"
@@ -20,7 +21,7 @@ function App() {
 					element={<ShoppingCart />}
 				/>
 			</Routes>
-		</>
+		</CartProvider>
 	);
 }
 

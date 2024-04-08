@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './css/navBar.css';
-import SearchByCategory from './products/SearchByCategory';
-import Cart from './Cart';
+import SearchByCategory from '../products/SearchByCategory';
+import CartBubble from './CartBubble';
 const NavBar = () => {
 	return (
 		<nav className="navBar">
@@ -27,7 +27,7 @@ const NavBar = () => {
 						<SearchByCategory />
 					</section>
 
-					<Cart/>
+					<CartBubble/>
 				</li>
 			</ul>
 		</nav>

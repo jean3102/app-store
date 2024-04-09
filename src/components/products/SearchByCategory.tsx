@@ -1,10 +1,11 @@
 import useProductsCategory from '../../hooks/useProductsCategory';
 import SelectList from '../nav/SelectList';
 import './css/searchProduct.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const SearchByCategory = () => {
 	const { categories } = useProductsCategory();
+	const { category } = useParams();
 	const navigate = useNavigate();
 
 	const handleSelectionChange = (
@@ -16,6 +17,7 @@ const SearchByCategory = () => {
 	return (
 		<section className="searchProduct">
 			<SelectList
+				value={category || 'all'}
 				onChange={handleSelectionChange}
 				data={categories}
 				id="category-choice"

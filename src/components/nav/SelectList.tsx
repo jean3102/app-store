@@ -1,16 +1,18 @@
 import './css/select.css';
 type InputProps = {
 	id: string;
+	value: string;
 	name: string;
 	data: [] | undefined;
 	onChange: (value: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-const SelectList = ({ id, name, data, onChange }: InputProps) => {
+const SelectList = ({ id, name, data, onChange,value }: InputProps) => {
 	return (
 		<>
 			<div className="group">
 				<select
+					value={value}
 					className="selectList"
 					name={name}
 					id={id}

@@ -1,6 +1,13 @@
 .button {
 	padding: 1em;
-	border-radius: 0.7em;
 	cursor: pointer;
-	border: 0;
+	outline: none;
+	color: #fff;
+	border: none;
+	border-radius: 15px;
+}
+
+.button:active {
+	box-shadow: none;
+	transform: translateY(2px);
 }

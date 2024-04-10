@@ -1,6 +1,9 @@
 .shoppingList {
 	padding: 1em;
-
+    h2{
+		border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+		padding-bottom: 1em;
+	} 
 	ul {
 		display: flex;
 		list-style: none;
@@ -73,10 +76,10 @@
 
 .shoppingListEmpty {
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	gap: 1em;
+	margin-top: 2em;
 	height: 600px;
 	font-size: 1.2em;
 	color: rgba(0, 0, 0, 0.733);
@@ -94,6 +97,7 @@
 
 @media screen and (max-width: 1000px) {
 	.shoppingList {
+		background-color: aqua;
 		padding: 0em;
 		text-align: center;
 		ul {

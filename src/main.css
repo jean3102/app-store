@@ -23,8 +23,9 @@
 
 	body {
 		background-color: #e3e6e6;
-		.container{
-			padding: 1em;
-		}
+	}
+
+	.container {
+		padding: 1em;
 	}
 }

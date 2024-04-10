@@ -16,7 +16,7 @@
 			display: flex;
 			align-items: center;
 			width: 100%;
-			justify-content: space-between;
+			justify-content: space-around;
 			flex-wrap: wrap;
 			gap: 1em;
 			button {
@@ -24,15 +24,16 @@
 				background-color: red;
 			}
 			p {
-				width: 250px;
+				width: 200px;
 				text-wrap: wrap;
 			}
 			img {
-				border: 1px solid rgba(128, 128, 128, 0.342);
+				border: 1px solid rgba(128, 128, 128, 0.288);
 				object-fit: fill;
 				width: 100px;
 				height: 120px;
 				border-radius: 0.5em;
+				padding: 1em;
 			}
 		}
 	}
@@ -41,20 +42,63 @@
 .priceContent {
 	display: flex;
 	gap: 1em;
+	width: 250px;
+	justify-content: space-between;
 	div {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		span:nth-child(2) {
 			color: rgba(0, 0, 0, 0.534);
 		}
 	}
 }
 
+.quantityContent {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	width: 110px;
+	justify-content: space-between;
+	:nth-child(3) {
+		border-radius: 2em;
+		width: 40px;
+		background-color: green;
+	}
+	:nth-child(1) {
+		border-radius: 2em;
+		width: 40px;
+	}
+}
+
+.shoppingListEmpty {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	height: 600px;
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.733);
+
+	a {
+		text-decoration: none;
+		display: flex;
+		gap: 0.2em;
+		color: white;
+		padding: 0.5em;
+		border-radius: 0.5em;
+		background-color: rgb(5, 69, 71);
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	.shoppingList {
+		padding: 0em;
 		text-align: center;
 		ul {
 			li {
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 			}

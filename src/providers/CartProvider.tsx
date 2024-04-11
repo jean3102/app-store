@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CartContext } from '../contexts/CarContext';
 import { Cart } from '../types/cart';
+import {notyf} from '../libs/notifications/noty'
 
 type CartProviderType = {
 	children: React.ReactNode;
@@ -12,7 +13,7 @@ export const CartProvider = ({ children }: CartProviderType) => {
 
 	const addToCart = (product: Cart) => {
 		setQuantity((prevValue) => prevValue + 1);
-		
+
 		if (cart.some((item) => item.id === product.id)) {
 			const newProduct = cart.map((item) =>
 				item.id === product.id
@@ -21,10 +22,11 @@ export const CartProvider = ({ children }: CartProviderType) => {
 			);
 
 			setCart(newProduct);
-			return;
+		} else {
+			setCart([...cart, product]);
 		}
 
-		setCart([...cart, product]);
+		notyf.success('Added to Cart');
 	};
 
 	return (
@@ -38,4 +40,3 @@ export const CartProvider = ({ children }: CartProviderType) => {
 		</CartContext.Provider>
 	);
 };
-

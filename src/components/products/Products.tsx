@@ -49,7 +49,7 @@ const Products = () => {
 											onClick={() =>
 												addToCart({
 													id: id,
-													img:image,
+													img: image,
 													name: title,
 													price: price,
 													quantity: 1,

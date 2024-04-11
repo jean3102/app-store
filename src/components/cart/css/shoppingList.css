@@ -97,7 +97,6 @@
 
 @media screen and (max-width: 1000px) {
 	.shoppingList {
-		background-color: aqua;
 		padding: 0em;
 		text-align: center;
 		ul {

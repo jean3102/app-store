@@ -82,6 +82,11 @@
 	height: 60px;
 	position: relative;
 	overflow: hidden;
+	
+}
+.el-wrapper .box-down:active  {
+	box-shadow: none;
+	transform: translateY(1px);
 }
 
 .el-wrapper .box-up {

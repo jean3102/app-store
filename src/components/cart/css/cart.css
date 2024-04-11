@@ -3,7 +3,7 @@
 	gap: 0.2em;
 	align-items: center;
 	justify-content: center;
-	padding-top: 2em;
+	padding-top: 1em;
 
 	svg {
 		color: black;
@@ -14,7 +14,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1em;
+	align-items: center;
+	gap: 2em;
 	margin: 2em;
 }
 
@@ -22,23 +23,16 @@
 	width: 55%;
 }
 
-.rightSide {
-	width: 30%;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.leftSide,
-.rightSide {
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	background-color: rgb(252, 252, 252);
+.leftSide {
+	background-color: #fff;
 	border-radius: 0.5em;
 	padding: 1em;
-	height: 650px;
 }
 @media screen and (max-width: 800px) {
 	.bodySide {
 		margin: 0;
 		margin-top: 1em;
+		flex-direction: column-reverse;
 	}
 
 	.leftSide,

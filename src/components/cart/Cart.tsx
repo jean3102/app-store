@@ -23,11 +23,15 @@ const Cart = () => {
 			</section>
 			<section className="bodySide">
 				<section className="leftSide">
-					<ShoppingList/>
+					<ShoppingList />
 				</section>
-				<section className="rightSide">
-					<TotalShoppingAmount/>
-				</section>
+				{productsList.length > 0 ? (
+					<section className="rightSide">
+						<TotalShoppingAmount />
+					</section>
+				) : (
+					''
+				)}
 			</section>
 		</>
 	);

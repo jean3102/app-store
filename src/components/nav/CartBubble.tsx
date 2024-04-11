@@ -7,10 +7,12 @@ const CartBubble = () => {
 	return (
 		<section className="cartCounter">
 			<Link to={'/shopping_cart'}>
-				{quantity > 9 ? (
-					<b className="quantity">9+</b>
-				) : (
+				{quantity > 99 ? (
+					<b className="quantity">99+</b>
+				) : quantity > 0 ? (
 					<b className="quantity">{quantity}</b>
+				) : (
+					''
 				)}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

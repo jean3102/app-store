@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './css/cartBubble.css';
+import '../../styles/nav/cartBubble.css';
 import { useCart } from '../../hooks';
 
 const CartBubble = () => {

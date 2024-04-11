@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
-import './css/products.css';
+import '../../styles/products/products.css';
 import { Suspense } from 'react';
 import LazyLoadedImage from './LazyLoadedImage';
 import Loading from '../Loading';

@@ -1,4 +1,4 @@
-import './css/select.css';
+import '../../styles/components/select.css';
 type InputProps = {
 	id: string;
 	value: string;
@@ -7,7 +7,7 @@ type InputProps = {
 	onChange: (value: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-const SelectList = ({ id, name, data, onChange,value }: InputProps) => {
+const SelectList = ({ id, name, data, onChange, value }: InputProps) => {
 	return (
 		<>
 			<div className="group">

@@ -1,4 +1,4 @@
-import './css/input.css';
+import '../styles/components/input.css';
 type InputProps = {
 	type: string;
 	placeholder?: string;

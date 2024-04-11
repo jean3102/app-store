@@ -1,4 +1,4 @@
-import './css/loading.css';
+import '../styles/components/loading.css';
 const Loading = () => {
 	return (
 		<div className="wrap">

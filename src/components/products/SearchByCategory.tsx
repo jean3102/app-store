@@ -1,6 +1,6 @@
 import useProductsCategory from '../../hooks/useProductsCategory';
 import SelectList from '../nav/SelectList';
-import './css/searchProduct.css';
+import '../../styles/products/searchProduct.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const SearchByCategory = () => {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../../hooks';
 import Button from '../Button';
-import './css/shoppingList.css';
+import '../../styles/cart/shoppingList.css';
 const ShoppingList = () => {
 	const removeProduct = () => {};
 	const addQuantity = () => {};

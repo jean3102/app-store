@@ -43,7 +43,7 @@
 	color: white;
 }
 .el-wrapper:hover .start {
-	left: 85px;
+	left: 125px;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
@@ -245,7 +245,7 @@
 	transition-delay: 100ms;
 	display: block;
 	position: absolute;
-	top: 50%;
+	top: 47%;
 	left: 60%;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);

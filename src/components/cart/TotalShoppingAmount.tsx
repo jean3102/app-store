@@ -1,6 +1,6 @@
 import { useCart } from '../../hooks';
 import Button from '../Button';
-import './css/totalShoppingAmount.css';
+import '../../styles/cart/totalShoppingAmount.css';
 const TotalShoppingAmount = () => {
 	const { quantity } = useCart();
 	const purchase = () => {};

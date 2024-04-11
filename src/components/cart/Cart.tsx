@@ -1,7 +1,7 @@
 import { useCart } from '../../hooks';
 import ShoppingList from './ShoppingList';
 import TotalShoppingAmount from './TotalShoppingAmount';
-import './css/cart.css';
+import '../../styles/cart/cart.css';
 const Cart = () => {
 	const { productsList, quantity } = useCart();
 	console.log(`🚀 ------------ productsList:`, productsList);

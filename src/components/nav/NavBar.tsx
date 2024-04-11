@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './css/navBar.css';
+import '../../styles/nav/navBar.css';
 import SearchByCategory from '../products/SearchByCategory';
 import CartBubble from './CartBubble';
 const NavBar = () => {

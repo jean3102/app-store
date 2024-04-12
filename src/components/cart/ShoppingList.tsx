@@ -3,10 +3,8 @@ import { useCart } from '../../hooks';
 import Button from '../Button';
 import '../../styles/cart/shoppingList.css';
 const ShoppingList = () => {
-	const removeProduct = () => {};
-	const addQuantity = () => {};
-	const restQuantity = () => {};
-	const { productsList } = useCart();
+	const { productsList, subtractQuantity, addQuantity, removeProduct } =
+		useCart();
 
 	return (
 		<section className="shoppingList">
@@ -22,9 +20,9 @@ const ShoppingList = () => {
 							<p>{name}</p>
 
 							<section className="quantityContent">
-								<Button onClick={restQuantity}>-</Button>
+								<Button onClick={() => subtractQuantity(id)}>-</Button>
 								<span>{quantity}</span>
-								<Button onClick={addQuantity}>+</Button>
+								<Button onClick={() => addQuantity(id)}>+</Button>
 							</section>
 
 							<section className="priceContent">
@@ -32,7 +30,7 @@ const ShoppingList = () => {
 									<span>${price * quantity}</span>
 									<span>${price} / per Item</span>
 								</div>
-								<Button onClick={removeProduct}>Remove</Button>
+								<Button onClick={() => removeProduct(id, quantity)}>Remove</Button>
 							</section>
 						</li>
 					))}

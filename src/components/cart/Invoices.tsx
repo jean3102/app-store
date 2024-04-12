@@ -1,8 +1,10 @@
 import { useCart } from '../../hooks';
 import Button from '../Button';
-import '../../styles/cart/totalShoppingAmount.css';
-const TotalShoppingAmount = () => {
-	const { quantity } = useCart();
+import '../../styles/cart/invoices.css';
+import useInvoices from '../../hooks/useInvoices';
+const Invoices = () => {
+	const { quantity, productsList } = useCart();
+	const { invoices } = useInvoices(productsList);
 	const purchase = () => {};
 
 	return (
@@ -34,17 +36,19 @@ const TotalShoppingAmount = () => {
 					<ul className="shopping__cart-list">
 						<li className="shopping__cart-item">
 							<span className="shopping__item-name">Shopping cost</span>
-							<span className="shopping__item-price">$48.00</span>
+							<span className="shopping__item-price">
+								${invoices?.shoppingCost}
+							</span>
 						</li>
 
 						<li className="shopping__cart-item">
 							<span className="shopping__item-name">Tax</span>
-							<span className="shopping__item-price">$95.00</span>
+							<span className="shopping__item-price">${invoices?.tax}</span>
 						</li>
 
 						<li className="shopping__cart-item">
 							<span className="shopping__cart-total">Total</span>
-							<span className="shopping__item-price">$268.00</span>
+							<span className="shopping__item-price">${invoices?.total}</span>
 						</li>
 					</ul>
 					<Button onClick={purchase}>Make Purchase</Button>
@@ -54,4 +58,4 @@ const TotalShoppingAmount = () => {
 	);
 };
 
-export default TotalShoppingAmount;
+export default Invoices;

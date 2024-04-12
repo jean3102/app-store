@@ -1,6 +1,6 @@
 import { useCart } from '../../hooks';
 import ShoppingList from './ShoppingList';
-import TotalShoppingAmount from './TotalShoppingAmount';
+import TotalShoppingAmount from './Invoices';
 import '../../styles/cart/cart.css';
 const Cart = () => {
 	const { productsList, quantity } = useCart();

@@ -10,7 +10,7 @@ import { useCart } from '../../hooks';
 const Products = () => {
 	const { category } = useParams();
 	const { products } = useProducts({ param: category });
-	const { addToCart } = useCart();
+	const { addToCart, quantity } = useCart();
 
 	return (
 		<section className="products">
@@ -48,6 +48,7 @@ const Products = () => {
 										<a
 											onClick={() =>
 												addToCart({
+													index:quantity,
 													id: id,
 													img: image,
 													name: title,

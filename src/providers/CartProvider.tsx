@@ -13,7 +13,6 @@ export const CartProvider = ({ children }: CartProviderType) => {
 
 	const addToCart = (product: Cart) => {
 		setQuantity((prevValue) => prevValue + 1);
-
 		if (cart.some((item) => item.id === product.id)) {
 			const newProduct = cart.map((item) =>
 				item.id === product.id
@@ -23,7 +22,7 @@ export const CartProvider = ({ children }: CartProviderType) => {
 
 			setCart(newProduct);
 		} else {
-			setCart([...cart, product]);
+			setCart([...cart, product].sort((a, b) => a.index - b.index).reverse());
 		}
 
 		notyf.success('Added to Cart');

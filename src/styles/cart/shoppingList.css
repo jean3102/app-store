@@ -5,7 +5,6 @@
 		padding-bottom: 0.5em;
 	}
 	ul {
-		list-style-type: revert;
 		display: flex;
 		list-style: none;
 		flex-direction: column;

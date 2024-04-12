@@ -3,43 +3,40 @@ import { useCart } from '../../hooks';
 import Button from '../Button';
 import '../../styles/cart/shoppingList.css';
 import { formatNumber } from '../../utils/formatNumber';
+
 const ShoppingList = () => {
-	const { productsList, subtractQuantity, addQuantity, removeProduct } =
-		useCart();
+	const { productsList, subtractQuantity, addQuantity, removeProduct } = useCart();
 
 	return (
 		<section className="shoppingList">
 			<h2>Your shopping cart</h2>
 			{productsList.length > 0 ? (
 				<ul>
-					{productsList
-						.sort()
-						.reverse()
-						.map(({ id, img, price, name, quantity }) => (
-							<li key={id}>
-								<img
-									src={img}
-									alt={name}
-								/>
-								<p>{name}</p>
+					{productsList.map(({ id, img, price, name, quantity }) => (
+						<li key={id}>
+							<img
+								src={img}
+								alt={name}
+							/>
+							<p>{name}</p>
 
-								<section className="quantityContent">
-									<Button onClick={() => subtractQuantity(id)}>-</Button>
-									<span>{quantity}</span>
-									<Button onClick={() => addQuantity(id)}>+</Button>
-								</section>
+							<section className="quantityContent">
+								<Button onClick={() => subtractQuantity(id)}>-</Button>
+								<span>{quantity}</span>
+								<Button onClick={() => addQuantity(id)}>+</Button>
+							</section>
 
-								<section className="priceContent">
-									<div>
-										<span>${formatNumber(price * quantity)}</span>
-										<span>${price} / per Item</span>
-									</div>
-									<Button onClick={() => removeProduct(id, quantity)}>
-										Remove
-									</Button>
-								</section>
-							</li>
-						))}
+							<section className="priceContent">
+								<div>
+									<span>${formatNumber(price * quantity)}</span>
+									<span>${price} / per Item</span>
+								</div>
+								<Button onClick={() => removeProduct(id, quantity)}>
+									Remove
+								</Button>
+							</section>
+						</li>
+					))}
 				</ul>
 			) : (
 				<section className="shoppingListEmpty">

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { CartContext } from '../contexts/CarContext';
 import { Cart } from '../types/cart';
-import { notyf } from '../libs/notifications/noty';
+import { notyf } from '../libs/noty/noty';
+import { sweetConfirm } from '../libs/sweetalert2/sweetalert2';
 
 type CartProviderType = {
 	children: React.ReactNode;
@@ -55,7 +56,10 @@ export const CartProvider = ({ children }: CartProviderType) => {
 		setQuantity((prevValue) => prevValue + 1);
 	};
 
-	const removeProduct = (id: number, quantityValue: number) => {
+	const removeProduct = async (id: number, quantityValue: number) => {
+		const confirm = await sweetConfirm('product');
+		if (!confirm) return;
+
 		if (cart.some((item) => item.id === id)) {
 			const newProduct = cart.filter((item) => {
 				setQuantity(quantity - quantityValue);

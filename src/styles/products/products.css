@@ -70,7 +70,7 @@
 	-webkit-transition-delay: 300ms;
 	-o-transition-delay: 300ms;
 	transition-delay: 300ms;
-	top: 40%;
+	top: 37%;
 	opacity: 1;
 	color: rgba(0, 0, 0, 0.678);
 	text-align: center;
@@ -82,9 +82,8 @@
 	height: 60px;
 	position: relative;
 	overflow: hidden;
-	
 }
-.el-wrapper .box-down:active  {
+.el-wrapper .box-down:active {
 	box-shadow: none;
 	transform: translateY(1px);
 }
@@ -159,7 +158,6 @@
 }
 
 .info-inner .p-name {
-	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 	color: #252525;
 }
@@ -185,7 +183,6 @@
 	position: absolute;
 	width: 100%;
 	bottom: -10px;
-	font-family: 'PT Sans', sans-serif;
 	color: #828282;
 	opacity: 0;
 }

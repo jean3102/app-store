@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { CartContext } from '../contexts/CarContext';
 import { Cart } from '../types/cart';
 import { notyf } from '../libs/noty/noty';
-import { sweetConfirm } from '../libs/sweetalert2/sweetalert2';
+import { confirmDelete, confirmSuccess } from '../libs/sweetalert2/sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 type CartProviderType = {
 	children: React.ReactNode;
@@ -11,6 +12,7 @@ type CartProviderType = {
 export const CartProvider = ({ children }: CartProviderType) => {
 	const [cart, setCart] = useState<Cart[]>([]);
 	const [quantity, setQuantity] = useState(0);
+	const navigate = useNavigate();
 
 	const addToCart = (product: Cart) => {
 		setQuantity((prevValue) => prevValue + 1);
@@ -57,7 +59,7 @@ export const CartProvider = ({ children }: CartProviderType) => {
 	};
 
 	const removeProduct = async (id: number, quantityValue: number) => {
-		const confirm = await sweetConfirm('product');
+		const confirm = await confirmDelete('product');
 		if (!confirm) return;
 
 		if (cart.some((item) => item.id === id)) {
@@ -66,6 +68,14 @@ export const CartProvider = ({ children }: CartProviderType) => {
 				return item.id !== id;
 			});
 			setCart(newProduct);
+		}
+	};
+
+	const confirmPurchase = async () => {
+		const confirm = await confirmSuccess({ title: 'Make the purchase' });
+		if (confirm) {
+			setCart([]);
+			navigate('/');
 		}
 	};
 
@@ -78,6 +88,7 @@ export const CartProvider = ({ children }: CartProviderType) => {
 				addToCart: addToCart,
 				quantity: quantity,
 				removeProduct: removeProduct,
+				confirmPurchase: confirmPurchase,
 			}}>
 			{children}
 		</CartContext.Provider>

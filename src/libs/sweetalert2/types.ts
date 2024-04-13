@@ -5,3 +5,9 @@ export type AlertType = {
 	text?: string;
 	icon?: SweetAlertIcon;
 };
+
+
+export type ConfirmSuccess = {
+	title: string;
+	text?: string;
+};

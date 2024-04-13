@@ -3,9 +3,8 @@ import Button from '../Button';
 import '../../styles/cart/invoices.css';
 import useInvoices from '../../hooks/useInvoices';
 const Invoices = () => {
-	const { quantity, productsList } = useCart();
+	const { quantity, productsList, confirmPurchase } = useCart();
 	const { invoices } = useInvoices(productsList);
-	const purchase = () => {};
 
 	return (
 		<>
@@ -51,7 +50,7 @@ const Invoices = () => {
 							<span className="shopping__item-price">${invoices?.total}</span>
 						</li>
 					</ul>
-					<Button onClick={purchase}>Make Purchase</Button>
+					<Button onClick={() => confirmPurchase()}>Make Purchase</Button>
 				</div>
 			</div>
 		</>

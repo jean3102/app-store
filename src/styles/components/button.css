@@ -5,9 +5,16 @@
 	color: #fff;
 	border: none;
 	border-radius: 15px;
+	font-weight: bold;
 }
 
 .button:active {
 	box-shadow: none;
 	transform: translateY(2px);
+}
+
+
+.button:hover{
+	opacity: 0.7;
+
 }

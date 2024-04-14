@@ -5,11 +5,11 @@
 	justify-content: center;
 	align-items: center;
 	gap: 2em;
-	margin-top: 5em;
+	height: 90vh;
 }
 
 .leftSide {
-	width: 50%;
+	width: 55%;
 }
 
 .leftSide {

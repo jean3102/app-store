@@ -1,0 +1,21 @@
+.Link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	margin-top: 1em;
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.733);
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		font-size: 13px;
+		gap: 0.2em;
+		color: white;
+		padding: 0.5em;
+		border-radius: 0.5em;
+		background-color: rgb(5, 69, 71);
+	}
+}

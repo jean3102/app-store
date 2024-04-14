@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
 import { useCart } from '../../hooks';
 import Button from '../Button';
 import '../../styles/cart/shoppingList.css';
 import { formatNumber } from '../../utils/formatNumber';
+import Hyperlink from '../Hyperlink';
 
 const ShoppingList = () => {
-	const { productsList, subtractQuantity, addQuantity, removeProduct } = useCart();
+	const { productsList, subtractQuantity, addQuantity, removeProduct } =
+		useCart();
 
 	return (
 		<section className="shoppingList">
@@ -39,23 +40,20 @@ const ShoppingList = () => {
 					))}
 				</ul>
 			) : (
-				<section className="shoppingListEmpty">
-					<h1>Your Cart is empty</h1>
-
-					<Link to={'/'}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 15 15">
-							<path
-								fill="currentColor"
-								d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414Z"
-							/>
-						</svg>
-						Go to store
-					</Link>
-				</section>
+				<Hyperlink
+					title="Your Cart is empty"
+					textLink="Go to store">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 15 15">
+						<path
+							fill="currentColor"
+							d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414Z"
+						/>
+					</svg>
+				</Hyperlink>
 			)}
 		</section>
 	);

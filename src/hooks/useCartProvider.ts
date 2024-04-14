@@ -5,7 +5,6 @@ import { confirmDelete, confirmSuccess } from '../libs/sweetalert2/sweetalert2';
 import { useState } from 'react';
 
 const useCartProvider = () => {
-console.log(`🚀 ------------ useCartProvider:`, useCartProvider)
 
 	const [productsList, setProductsList] = useState<Cart[]>([]);
 	const [quantity, setQuantity] = useState(0);

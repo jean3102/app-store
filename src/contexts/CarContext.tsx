@@ -14,3 +14,5 @@ type CartContextType = {
 export const CartContext = createContext<CartContextType | undefined>(
 	undefined
 );
+
+

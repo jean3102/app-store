@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getProductCategory } from '../services/products';
+import { notyf } from '../libs/noty/noty';
 
 const useProductsCategory = () => {
 	const [categories, setCategories] = useState<[]>();
@@ -11,10 +12,10 @@ const useProductsCategory = () => {
 				setCategories(response);
 			} catch (error) {
 				if (error instanceof Error) {
-					alert(`Caught an error:${error.message}`);
+					notyf.error(`Caught an error:${error.message}`);
 				} else {
 					// Handling non-Error types of errors
-					alert(`Caught a non-Error type of error:${error}`);
+					notyf.error(`Caught a non-Error type of error:${error}`);
 				}
 			}
 		};

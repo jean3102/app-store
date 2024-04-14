@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Cart } from '../types/cart';
 import { notyf } from '../libs/noty/noty';
 import { confirmDelete, confirmSuccess } from '../libs/sweetalert2/sweetalert2';
@@ -8,7 +7,6 @@ const useCartProvider = () => {
 
 	const [productsList, setProductsList] = useState<Cart[]>([]);
 	const [quantity, setQuantity] = useState(0);
-	const navigate = useNavigate();
 
 	const addToCart = (product: Cart) => {
 		setQuantity((prevValue) => prevValue + 1);
@@ -71,7 +69,6 @@ const useCartProvider = () => {
 		const confirm = await confirmSuccess({ title: 'Make the purchase' });
 		if (confirm) {
 			setProductsList([]);
-			navigate('/');
 		}
 	};
 

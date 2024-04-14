@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../styles/components/pageError.css';
 import Button from './Button';
 const PageError = () => {

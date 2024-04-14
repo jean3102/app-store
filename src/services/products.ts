@@ -17,3 +17,4 @@ const getProductCategory = async (): Promise<[]> => {
 };
 
 export { getProducts, getProductCategory };
+

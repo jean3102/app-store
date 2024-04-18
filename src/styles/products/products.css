@@ -1,12 +1,12 @@
 .products {
-	height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
 	justify-content: center;
-	overflow-y: auto;
 	border-top: 1px solid rgba(128, 128, 128, 0.329);
 	list-style-type: none;
+	padding-top: 5em;
+	min-height: 1000px;
 }
 
 .el-wrapper {

@@ -23,11 +23,9 @@ const NavBar = () => {
 				</li>
 
 				<li>
-					<section>
-						<SearchByCategory />
-					</section>
+					<SearchByCategory />
 
-					<CartBubble/>
+					<CartBubble />
 				</li>
 			</ul>
 		</nav>

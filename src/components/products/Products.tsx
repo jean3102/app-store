@@ -16,7 +16,7 @@ const Products = () => {
 	return (
 		<ul className="products">
 			{error ? (
-				<PageError/>
+				<PageError />
 			) : loading ? (
 				<Loading />
 			) : (
@@ -62,8 +62,7 @@ const Products = () => {
 														quantity: 1,
 													})
 												}
-												className="cart"
-												href="#">
+												className="cart">
 												<span className="price">${price} </span>
 												<div className="start">
 													<ProductRating rating={rating.rate} />

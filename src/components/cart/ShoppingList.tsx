@@ -10,7 +10,7 @@ const ShoppingList = () => {
 
 	return (
 		<section className="shoppingList">
-			<h2>Your shopping cart</h2>
+			<h2>Shopping cart</h2>
 			{productsList.length > 0 ? (
 				<ul>
 					{productsList.map(({ id, img, price, name, quantity }) => (

@@ -3,9 +3,8 @@ import ShoppingList from './ShoppingList';
 import TotalShoppingAmount from './Invoices';
 import '../../styles/cart/cart.css';
 const Cart = () => {
-	const { productsList, quantity } = useCart();
-	console.log(`🚀 ------------ productsList:`, productsList);
-	console.log(`🚀 ------------ quantity:`, quantity);
+	const { productsList } = useCart();
+
 	return (
 		<>
 			<section className="bodySide">

@@ -17,7 +17,7 @@ function App() {
 				/>
 
 				<Route
-					path="/shopping_cart"
+					path="shopping_cart"
 					element={<ShoppingCart />}
 				/>
 			</Routes>

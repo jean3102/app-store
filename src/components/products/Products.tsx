@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import '../../styles/products/products.css';
 import { Suspense } from 'react';
-import LazyLoadedImage from './LazyLoadedImage';
+import LazyLoadedImage from '../LazyLoadedImage';
 import Loading from '../Loading';
 import ProductRating from './ProductRating';
 import { useCart } from '../../hooks';

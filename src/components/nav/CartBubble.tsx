@@ -4,7 +4,6 @@ import { useCart } from '../../hooks';
 
 const CartBubble = () => {
 	const { quantity } = useCart();
-	console.log(`🚀 ------------ quantity:`, quantity)
 	return (
 		<section className="cartCounter">
 			<Link to={'/shopping_cart'}>

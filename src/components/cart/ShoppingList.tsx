@@ -3,6 +3,9 @@ import Button from '../Button';
 import '../../styles/cart/shoppingList.css';
 import { formatNumber } from '../../utils/formatNumber';
 import Hyperlink from '../Hyperlink';
+import { Suspense } from 'react';
+import LazyLoadedImage from '../LazyLoadedImage';
+import Loading from '../Loading';
 
 const ShoppingList = () => {
 	const { productsList, subtractQuantity, addQuantity, removeProduct } =
@@ -15,10 +18,12 @@ const ShoppingList = () => {
 				<ul>
 					{productsList.map(({ id, img, price, name, quantity }) => (
 						<li key={id}>
-							<img
-								src={img}
-								alt={name}
-							/>
+							<Suspense fallback={<Loading />}>
+								<LazyLoadedImage
+									src={img}
+									alt={name}
+								/>
+							</Suspense>
 							<p>{name}</p>
 
 							<section className="quantityContent">

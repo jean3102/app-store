@@ -7,12 +7,12 @@ const Cart = () => {
 
 	return (
 		<>
-			<section className="bodySide">
-				<section className="leftSide">
+			<section className="bodyCart">
+				<section className="shoppingListCart">
 					<ShoppingList />
 				</section>
 				{productsList.length > 0 ? (
-					<section className="rightSide">
+					<section>
 						<TotalShoppingAmount />
 					</section>
 				) : (

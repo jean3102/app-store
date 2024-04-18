@@ -1,31 +1,36 @@
-
-.bodySide {
+.bodyCart {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 2em;
-	height: 90vh;
+	min-height: 100vh;
 }
 
-.leftSide {
+.shoppingListCart {
 	width: 55%;
 }
 
-.leftSide {
+.shoppingListCart {
 	background-color: #fff;
 	border-radius: 0.5em;
 	padding: 1em;
 }
-@media screen and (max-width: 800px) {
-	.bodySide {
-		margin: 1em;
+@media screen and (max-width: 1800px) {
+	.bodyCart {
+		padding: 1em 2em;
+		min-height: 95vh;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.bodyCart {
+		padding: 6em 2em;
 		height: auto;
-		margin-top: 1em;
 		flex-direction: column-reverse;
 	}
 
-	.leftSide{
+	.shoppingListCart {
 		width: 90%;
 	}
 }

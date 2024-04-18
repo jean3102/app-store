@@ -7,7 +7,7 @@ const sweetAlert = ({ title, text, icon }: AlertType) => {
 		text: text,
 		icon: icon || 'success',
 		showConfirmButton: false,
-		timer: 1500,
+		timer: 2000,
 	});
 };
 
@@ -43,7 +43,7 @@ const confirmSuccess = async ({
 	});
 
 	if (alertStatus.isConfirmed) {
-		sweetAlert({ title: 'Deleted!', text: `Your ${name} has been deleted.` });
+		sweetAlert({ title: 'Success!', text: `Your data has been processed.` });
 	}
 	return alertStatus.isConfirmed;
 };

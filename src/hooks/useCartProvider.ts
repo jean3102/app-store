@@ -3,8 +3,8 @@ import { notyf } from '../libs/noty/noty';
 import { confirmDelete, confirmSuccess } from '../libs/sweetalert2/sweetalert2';
 import { useState } from 'react';
 
-const useCartProvider = () => {
 
+const useCartProvider = () => {
 	const [productsList, setProductsList] = useState<Cart[]>([]);
 	const [quantity, setQuantity] = useState(0);
 
@@ -19,7 +19,9 @@ const useCartProvider = () => {
 
 			setProductsList(newProduct);
 		} else {
-			setProductsList([...productsList, product].sort((a, b) => a.index - b.index).reverse());
+			setProductsList(
+				[...productsList, product].sort((a, b) => a.index - b.index).reverse()
+			);
 		}
 
 		notyf.success('Added to Cart');
@@ -69,6 +71,8 @@ const useCartProvider = () => {
 		const confirm = await confirmSuccess({ title: 'Make the purchase' });
 		if (confirm) {
 			setProductsList([]);
+			setQuantity(0);
+			
 		}
 	};
 

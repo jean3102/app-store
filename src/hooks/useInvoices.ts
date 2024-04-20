@@ -19,7 +19,7 @@ const useInvoices = (productsList: Cart[]) => {
 			setInvoices({
 				shoppingCost: formatNumber(total),
 				tax: tax,
-				total: formatNumber(total - tax) ,
+				total: formatNumber(total + tax) ,
 			});
 		};
 		calculateInvoices();

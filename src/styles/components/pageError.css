@@ -5,6 +5,9 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5em;
+	height: 400px;
+	margin-top: 2em;
+	font-size: 1.7em;
 }
 .animation-container {
 	position: relative;

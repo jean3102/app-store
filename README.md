@@ -1,4 +1,5 @@
-#Application that simulates the purchase of products
+# App Store
+Application that simulates the purchase of products
 
 ## Installation
 
